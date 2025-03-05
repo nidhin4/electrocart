@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - ShopEase</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ShopEase</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Order Confirmation Section -->
+    <section class="order-confirmation">
+        <div class="container">
+            <h2>Congratulations! Your Order is Confirmed!</h2>
+            <p>Thank you for your purchase. We are processing your order, and it will be shipped shortly.</p>
+
+            <div class="order-details">
+                <h3>Order Summary:</h3>
+                <p><strong>Product: </strong><span id="product-name"></span></p>
+                <p><strong>Price: ₹</strong><span id="product-price"></span></p>
+            </div>
+
+          <a href="contact.html" > <p>If you have any questions, feel free to <a href="contact.html">contact us</a>.</p></a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <p>&copy; 2025 ShopEase. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Get the URL parameters from the URL (product and price)
+        const urlParams = new URLSearchParams(window.location.search);
+        const product = urlParams.get('product');
+        const price = urlParams.get('price');
+
+        // Display the product and price on the confirmation page
+        document.getElementById('product-name').innerText = product;
+        document.getElementById('product-price').innerText = price;
+    </script>
+
+</body>
+</html>
